@@ -790,6 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204944752d51344da5fff9963bae5b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  solversAnimator: {fileID: 3666988516478714919}
   moveController: {fileID: 4284560480258114867}
 --- !u!114 &4284560480258114867
 MonoBehaviour:
@@ -803,8 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036a0631929246842bb7637582d1cda7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  m_JumpForce: 400
+  speed: 5
+  m_JumpForce: 700
   m_AirControl: 0
   OnLandEvent:
     m_PersistentCalls:
@@ -925,7 +926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756820137924135446}
   m_LocalRotation: {x: -0, y: -0, z: -0.68005085, w: 0.733165}
-  m_LocalPosition: {x: -0.070830464, y: -1.941753, z: 0.1871502}
+  m_LocalPosition: {x: -0.07083046, y: -1.941753, z: 0.1871502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 306832315107880317}
