@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: f3b916d16587c2844a2a5358dd51eaa0
+ScriptedImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4979363154352999712
+    second: Rogue_0
+  - first:
+      213: 7921502813010559805
+    second: Rogue_1
+  - first:
+      213: 500092995896763561
+    second: Rogue_2
+  - first:
+      213: 7521268726740968743
+    second: Rogue_3
+  - first:
+      213: -8450313840416949542
+    second: Rogue_4
+  - first:
+      213: 7652387563259126412
+    second: Rogue_5
+  - first:
+      213: 747537166349585552
+    second: Rogue_6
+  - first:
+      213: 4904535553711869849
+    second: Rogue_7
+  - first:
+      213: 807448920738025961
+    second: Rogue_8
+  - first:
+      213: 7173849240055794619
+    second: Rogue_9
+  - first:
+      213: -6278177606702991857
+    second: Rogue_10
+  - first:
+      213: -7975333021530239752
+    second: Rogue_11
+  - first:
+      213: 1994531281486962280
+    second: Rogue_12
+  - first:
+      213: 668791810751214081
+    second: Rogue_13
+  - first:
+      213: 2421803570938959372
+    second: Rogue_14
+  - first:
+      213: 5730733498990671059
+    second: Rogue_15
+  - first:
+      213: -4531169583047112179
+    second: Rogue_16
+  - first:
+      213: 7680561156586893442
+    second: Rogue_17
+  - first:
+      213: -3886790462070318021
+    second: Rogue_18
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Rogue_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 468
+      width: 37
+      height: 33
+    spriteID: 02d01e638604a1540800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 468}
+  - name: Rogue_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 62
+      y: 453
+      width: 41
+      height: 45
+    spriteID: d3380c8a6d4deed60800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 62, y: 453}
+  - name: Rogue_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 398
+      width: 50
+      height: 62
+    spriteID: 9a4661f1eefa0f600800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 398}
+  - name: Rogue_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 62
+      y: 390
+      width: 51
+      height: 55
+    spriteID: 72566adbe0ae06860800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 62, y: 390}
+  - name: Rogue_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 327
+      width: 50
+      height: 63
+    spriteID: ada716575547aba80800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 327}
+  - name: Rogue_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 62
+      y: 327
+      width: 51
+      height: 55
+    spriteID: c826da7d1fdb23a60800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 62, y: 327}
+  - name: Rogue_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 27
+      y: 297
+      width: 33
+      height: 22
+    spriteID: 09c4ba89719cf5a00800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 27, y: 297}
+  - name: Rogue_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 68
+      y: 303
+      width: 9
+      height: 10
+    spriteID: 99f054bc919601440800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 68, y: 303}
+  - name: Rogue_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 81
+      y: 304
+      width: 7
+      height: 10
+    spriteID: 9e1dcdee382a43b00800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 81, y: 304}
+  - name: Rogue_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 94
+      y: 298
+      width: 30
+      height: 21
+    spriteID: bbb4bb900e1ae8360800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 94, y: 298}
+  - name: Rogue_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 251
+      width: 124
+      height: 46
+    spriteID: f06f7abdabe6fd8a0800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 251}
+  - name: Rogue_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 269
+      width: 31
+      height: 34
+    spriteID: 8fc4f3e3fdce15190800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 141, y: 269}
+  - name: Rogue_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 246
+      width: 38
+      height: 26
+    spriteID: 86e5f6e02affdab10800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 182, y: 246}
+  - name: Rogue_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 138
+      width: 129
+      height: 105
+    spriteID: 1023484cb96084900800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 138}
+  - name: Rogue_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 209
+      width: 33
+      height: 52
+    spriteID: c06d6993489fb9120800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 141, y: 209}
+  - name: Rogue_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 209
+      width: 40
+      height: 29
+    spriteID: 3d435cd21c7a78f40800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 182, y: 209}
+  - name: Rogue_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 129
+      height: 126
+    spriteID: d0a0c69754d0e11c0800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Rogue_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 125
+      width: 137
+      height: 76
+    spriteID: 2807606bda5d69a60800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 141, y: 125}
+  - name: Rogue_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 4
+      width: 142
+      height: 113
+    spriteID: b3c1ce7faa85f0ac0800000000000000
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 141, y: 4}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 512
+  importedTextureHeight: 512
+  documentSize: {x: 200, y: 302}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 512
+  textureActualHeight: 512
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Shoulder_l
+    spriteName: Shoulder_l
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 84195dd8caf6f724ea1e294f9f2e241a
+    layerID: 22
+    mosaicPosition: {x: 4, y: 398}
+  - name: Elbow_l
+    spriteName: Elbow_l
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f206ab4f4f12c34dbc8d18184ef327e
+    layerID: 12
+    mosaicPosition: {x: 62, y: 453}
+  - name: Wrist_l
+    spriteName: Wrist_l
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63d1a47c55eab794291898099f4a98a9
+    layerID: 14
+    mosaicPosition: {x: 4, y: 468}
+  - name: Boot_l
+    spriteName: Boot_l
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1fc37c1dea5d0704d85dae16a7fc2c9b
+    layerID: 8
+    mosaicPosition: {x: 182, y: 246}
+  - name: Boot_r
+    spriteName: Boot_r
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e332654624ba659459fba90a05c15df8
+    layerID: 10
+    mosaicPosition: {x: 182, y: 209}
+  - name: Hair
+    spriteName: Hair
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4dd5198dc50520e45a2ccc25f0e1dd3f
+    layerID: 30
+    mosaicPosition: {x: 141, y: 4}
+  - name: Face
+    spriteName: Face
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b24438cd7d37d414c83983f02e68975d
+    layerID: 26
+    mosaicPosition: {x: 4, y: 251}
+  - name: Head
+    spriteName: Head
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bed936484ceb7344a8421cb8b48b834d
+    layerID: 2
+    mosaicPosition: {x: 4, y: 4}
+  - name: Torso
+    spriteName: Torso
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5c9111f88084e2c429dc25bc6c14fb22
+    layerID: 5
+    mosaicPosition: {x: 4, y: 138}
+  - name: Pelvis
+    spriteName: Pelvis
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cf13ccc1b3ae1d64590dd1f803e72c84
+    layerID: 23
+    mosaicPosition: {x: 141, y: 125}
+  - name: Shoulder_r
+    spriteName: Shoulder_r
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 14d0e0c068697bb47957eba1969ab0cf
+    layerID: 18
+    mosaicPosition: {x: 4, y: 327}
+  - name: Elbow_r
+    spriteName: Elbow_r
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 20b0fb83163f63b4f86b42475cc859e4
+    layerID: 17
+    mosaicPosition: {x: 141, y: 209}
+  - name: Wrist_r
+    spriteName: Wrist_r
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d418e74f5ac1b7b4db40fb31f5df632f
+    layerID: 13
+    mosaicPosition: {x: 141, y: 269}
+  - name: Leg_l
+    spriteName: Leg_l
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3876dd96d89baae479a367185ec85a71
+    layerID: 21
+    mosaicPosition: {x: 62, y: 327}
+  - name: Leg_r
+    spriteName: Leg_r
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 62529848619b15f48a3e414ff80dedd8
+    layerID: 20
+    mosaicPosition: {x: 62, y: 390}
+  characterData:
+    bones:
+    - name: bone_1
+      position: {x: 197.48502, y: 30.85231, z: 0}
+      rotation: {x: 0, y: 0, z: 0.25535217, w: 0.96684813}
+      length: 8.644819
+      parentId: 10
+    - name: bone_2
+      position: {x: 8.644803, y: 0.0000052005234, z: 0}
+      rotation: {x: 0, y: 0, z: 0.24675022, w: 0.96907914}
+      length: 9.746965
+      parentId: 0
+    - name: bone_3
+      position: {x: 9.746971, y: 0.000005826938, z: 0}
+      rotation: {x: 0, y: 0, z: 0.32747233, w: 0.9448608}
+      length: 10.972791
+      parentId: 1
+    - name: bone_4
+      position: {x: 10.97279, y: 0.000006598325, z: 0}
+      rotation: {x: 0, y: 0, z: 0.079270475, w: 0.9968532}
+      length: 17.040628
+      parentId: 2
+    - name: bone_5
+      position: {x: 33.737602, y: 66.91392, z: 0}
+      rotation: {x: 0, y: -0, z: 0.98007095, w: 0.19864784}
+      length: 20.189377
+      parentId: 10
+    - name: bone_6
+      position: {x: 20.189375, y: -0.00000073094384, z: 0}
+      rotation: {x: 0, y: 0, z: -0.113267444, w: 0.99356455}
+      length: 36.60015
+      parentId: 4
+    - name: bone_7
+      position: {x: 36.60015, y: -0.000012506038, z: 0}
+      rotation: {x: 0, y: 0, z: -0.33431995, w: -0.94245964}
+      length: 18.8377
+      parentId: 5
+    - name: bone_8
+      position: {x: 29.607328, y: -63.985207, z: 0}
+      rotation: {x: 0, y: -0, z: -0.9960276, w: 0.089045286}
+      length: 19.674765
+      parentId: 10
+    - name: bone_9
+      position: {x: 19.67477, y: 0.0000175647, z: 0}
+      rotation: {x: 0, y: 0, z: -0.017338283, w: 0.9998497}
+      length: 32.579117
+      parentId: 7
+    - name: bone_10
+      position: {x: 32.57912, y: -0.000022371536, z: 0}
+      rotation: {x: 0, y: 0, z: 0.22753793, w: 0.97376925}
+      length: 17.694506
+      parentId: 8
+    - name: bone_11
+      position: {x: 109.88382, y: 87.49651, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7155394, w: 0.69857246}
+      length: 61.79164
+      parentId: -1
+    - name: bone_12
+      position: {x: -49.867268, y: 43.709465, z: 0}
+      rotation: {x: 0, y: -0, z: 0.9924403, w: 0.12272841}
+      length: 15.705625
+      parentId: 10
+    - name: bone_13
+      position: {x: 15.705623, y: -0.000003440713, z: 0}
+      rotation: {x: 0, y: 0, z: -0.1618666, w: -0.9868127}
+      length: 14.408013
+      parentId: 11
+    - name: bone_14
+      position: {x: -49.75266, y: -33.903564, z: 0}
+      rotation: {x: 0, y: -0, z: -0.9970524, w: 0.07672459}
+      length: 19.581432
+      parentId: 10
+    - name: bone_15
+      position: {x: 19.581429, y: 0.0000019402794, z: 0}
+      rotation: {x: 0, y: 0, z: -0.15906774, w: 0.9872677}
+      length: 13.977822
+      parentId: 13
+    parts:
+    - spritePosition:
+        x: 14
+        y: 97
+        width: 50
+        height: 62
+      spriteId: 84195dd8caf6f724ea1e294f9f2e241a
+      bones: 04000000050000000a0000000d000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 3
+        y: 65
+        width: 41
+        height: 45
+      spriteId: 3f206ab4f4f12c34dbc8d18184ef327e
+      bones: 050000000600000004000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 0
+        y: 43
+        width: 195
+        height: 33
+      spriteId: 63d1a47c55eab794291898099f4a98a9
+      bones: 060000000500000009000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 43
+        y: 1
+        width: 38
+        height: 26
+      spriteId: 1fc37c1dea5d0704d85dae16a7fc2c9b
+      bones: 0c0000000b00000005000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 123
+        y: 0
+        width: 40
+        height: 29
+      spriteId: e332654624ba659459fba90a05c15df8
+      bones: 0e0000000d000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 4
+        y: 46
+        width: 166
+        height: 256
+      spriteId: 4dd5198dc50520e45a2ccc25f0e1dd3f
+      bones: 00000000020000000100000003000000060000000a00000005000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 43
+        y: 150
+        width: 124
+        height: 68
+      spriteId: b24438cd7d37d414c83983f02e68975d
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 38
+        y: 151
+        width: 129
+        height: 126
+      spriteId: bed936484ceb7344a8421cb8b48b834d
+      bones: 0a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 38
+        y: 65
+        width: 129
+        height: 105
+      spriteId: 5c9111f88084e2c429dc25bc6c14fb22
+      bones: 0a00000004000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 32
+        y: 28
+        width: 137
+        height: 76
+      spriteId: cf13ccc1b3ae1d64590dd1f803e72c84
+      bones: 0d0000000a0000000b000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 142
+        y: 97
+        width: 50
+        height: 63
+      spriteId: 14d0e0c068697bb47957eba1969ab0cf
+      bones: 07000000080000000a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 159
+        y: 59
+        width: 33
+        height: 52
+      spriteId: 20b0fb83163f63b4f86b42475cc859e4
+      bones: 090000000800000007000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 1
+        y: 43
+        width: 199
+        height: 34
+      spriteId: d418e74f5ac1b7b4db40fb31f5df632f
+      bones: 090000000800000006000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 43
+        y: 12
+        width: 51
+        height: 55
+      spriteId: 3876dd96d89baae479a367185ec85a71
+      bones: 0c0000000b00000005000000000000000a000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 111
+        y: 12
+        width: 51
+        height: 55
+      spriteId: 62529848619b15f48a3e414ff80dedd8
+      bones: 0e0000000d000000050000000a000000
+      parentGroup: 0
+      order: 0
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: Rogue Texture
+  prefabAssetName: Rogue Prefab
+  spriteLibAssetName: Rogue Sprite Lib
+  secondarySpriteTextures: []
