@@ -2,32 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class PlayerData
 {
-    private int health;
-    private int level = 0;
+    public int level;
+    public int health;
+    public float[] position;
+    public int[] levels;
+    public int[] completedLevels;
 
-    public int Health
+    public void Clear()
     {
-        get => health;
-        set => health = value;
+        level = 0;
+        health = 0;
     }
+}
 
-
-    public PlayerData()
-    {
-        health = 10;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+public static class StaticData
+{
+    public static bool hasMainSceneLoaded = false;
 }

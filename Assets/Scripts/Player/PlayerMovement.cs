@@ -15,29 +15,18 @@ public enum Direction
 public class PlayerMovement : MonoBehaviour
 {
 	[SerializeField] private float speed = 3f;
-	[SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
-	[SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
+	[SerializeField] private float m_JumpForce = 400f;
+	[SerializeField] private bool m_AirControl = false;
 
-	private bool m_Grounded;            // Whether or not the player is grounded.
+	private bool m_Grounded;
 	private Rigidbody2D m_Rigidbody2D;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	private bool m_FacingRight = true;
 	private bool shouldJump = false;
 	private Vector3 movement;
-
-	[Header("Events")]
-	[Space]
-	public UnityEvent OnLandEvent;
-
-	[System.Serializable]
-	public class BoolEvent : UnityEvent<bool> { }
-
 
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
-		if (OnLandEvent == null)
-			OnLandEvent = new UnityEvent();
 	}
 
     private void Update()
@@ -45,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 		movement.x = Input.GetAxisRaw("Horizontal") * speed;
 		movement.y = Input.GetAxisRaw("Vertical");
 
-		if (Input.GetKeyDown(KeyCode.Space) && !shouldJump)
+		if (Input.GetKeyDown(KeyCode.Space) && !shouldJump && m_Grounded)
 		{
 			shouldJump = true;
 		}
@@ -55,24 +44,19 @@ public class PlayerMovement : MonoBehaviour
 	{
 		movement.x = movement.x * Time.fixedDeltaTime;
 
-		if (m_Grounded && movement.y > 0f) movement.y = 0f;
+		if (m_Grounded || movement.y > 0f) movement.y = 0f;
 
 		Move();
 	}
 
 	public void Move()
 	{
-		if (m_Grounded && shouldJump)
-		{
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			m_Grounded = false;
-			shouldJump = false;
-		}
 
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
-			m_Rigidbody2D.MovePosition(transform.position + movement);
+			//m_Rigidbody2D.MovePosition(transform.position + movement);
+			transform.position += movement;
 
 			if (movement.x > 0 && !m_FacingRight)
 			{
@@ -84,6 +68,12 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
 
+		if (m_Grounded && shouldJump)
+		{
+			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Grounded = false;
+			shouldJump = false;
+		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)

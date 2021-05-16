@@ -6,25 +6,27 @@ public class PlayerController : MonoBehaviour
 {
     public Animator solversAnimator;
     public PlayerMovement moveController;
-    public PlayerData data;
+    private static PlayerData data;
+
+    public static PlayerData PlayerData
+    {
+        get => data;
+    }
 
     private void Awake()
     {
-        //if new game
-        data = new PlayerData();
-        //else
-        //data = savesystem.load
+        if (SaveSystem.FileExists())
+        {
+            data = SaveSystem.LoadData();
+        }
+        else
+        {
+            data = new PlayerData();
+        }
     }
 
     void Update()
     {
-        if (data.Health == 0)
-        {
-            Application.Quit();
-            return;
-        }
-
-        //should be optimized -> when changing directions there is a moment, when Input.GetAxisRaw("Horizontal") == 0
         if (Input.GetAxisRaw("Horizontal") != 0 )
         {
             solversAnimator.SetTrigger("Walk");
@@ -35,4 +37,21 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Water")
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        SaveSystem.SavePlayer();
+        data.health = 0;
+        moveController.enabled = false;
+        GUIManager.instance.OpenGameOverMenu();
+    }
+
 }
