@@ -1,26 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GUIManager GUIManager;
+    private static GameManager instance;
+    private static PlayerData data;
 
+    public static PlayerData PlayerData
+    {
+        get => data;
+    }
+
+    public static GameManager Instance
+    {
+        get => instance;
+    }
 
     private void Awake()
     {
-        //Instantiate(this.GUIManager);
+        if (instance != null)
+        {
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            return;
+        }
+
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        if (SaveSystem.FileExists())
+        {
+            SaveSystem.DeleteFile();
+            data = new PlayerData();
+            //data = SaveSystem.LoadData();
+        }
+        else
+        {
+            data = new PlayerData();
+        }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void LoadLevel(Level level)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SceneManager.LoadScene(level.ToString());
     }
 }

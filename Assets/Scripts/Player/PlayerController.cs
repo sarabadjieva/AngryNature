@@ -6,24 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     public Animator solversAnimator;
     public PlayerMovement moveController;
-    private static PlayerData data;
+    //private static PlayerData data;
 
-    public static PlayerData PlayerData
+    /*public static PlayerData PlayerData
     {
         get => data;
-    }
+    }*/
 
-    private void Awake()
-    {
-        if (SaveSystem.FileExists())
-        {
-            data = SaveSystem.LoadData();
-        }
-        else
-        {
-            data = new PlayerData();
-        }
-    }
 
     void Update()
     {
@@ -48,10 +37,10 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        moveController.Freeze = true;
+
         SaveSystem.SavePlayer();
-        data.health = 0;
-        moveController.enabled = false;
-        GUIManager.instance.OpenGameOverMenu();
+        GUIManager.Instance.OpenGameOverMenu();
     }
 
 }

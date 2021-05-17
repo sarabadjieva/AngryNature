@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum Level
-{
-    Ice = 1,
-    Forest
-}
 
 public class LevelController : MonoBehaviour
 {
@@ -19,7 +14,5 @@ public class LevelController : MonoBehaviour
             SceneManager.LoadScene("MainScene");
             return;
         }
-
-        PlayerController.PlayerData.health = 3;
     }
 }

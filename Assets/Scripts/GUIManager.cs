@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GUIManager : MonoBehaviour
 {
-    public static GUIManager instance;
+    private static GUIManager instance;
 
     [Header("Main Menu")]
     public GameObject goMainMenu;
@@ -14,6 +13,10 @@ public class GUIManager : MonoBehaviour
     [Header("Game Over Menu")]
     public GameObject goGameOverMenu;
 
+    public static GUIManager Instance
+    {
+        get => instance;
+    }
 
     private void Awake()
     {
@@ -50,16 +53,7 @@ public class GUIManager : MonoBehaviour
 
     public void OnClickLevel(int levelNum)
     {
-        switch (levelNum)
-        {
-            case 1:
-                SceneManager.LoadScene("IceIceBaby");
-                break;
-
-            default:
-                break;
-        }
-
+        GameManager.Instance.LoadLevel((Level)levelNum);
         OpenMenu(MenuType.None);
     }
 
@@ -76,12 +70,12 @@ public class GUIManager : MonoBehaviour
 
     public void OnClickRetry()
     {
-
+        OpenMenu(MenuType.None);
     } 
     
     public void OnClickMainMenu()
     {
-
+        OpenMenu(MenuType.Main);
     } 
     
     public void OnClickExit()

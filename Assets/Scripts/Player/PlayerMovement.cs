@@ -3,38 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum Direction
-{
-	None,
-	Up,
-	Down,
-	Left,
-	Right
-}
-
 public class PlayerMovement : MonoBehaviour
 {
 	[SerializeField] private float speed = 3f;
 	[SerializeField] private float m_JumpForce = 400f;
-	[SerializeField] private bool m_AirControl = false;
+	[SerializeField] private bool airControl = false;
 
-	private bool m_Grounded;
-	private Rigidbody2D m_Rigidbody2D;
-	private bool m_FacingRight = true;
+	private Rigidbody2D rb2D;
+
+	private bool freeze = false;
+	private bool grounded;
 	private bool shouldJump = false;
-	private Vector3 movement;
+	private bool facingRight = true;
+
+	private float moveHorizontal = 0f;
+	private float moveVertical = 0f;
+
+	public bool Freeze
+	{
+		get => freeze;
+		set 
+		{
+			freeze = value;
+			rb2D.simulated = value;
+			rb2D.velocity = Vector3.zero;
+		}
+    }
 
 	private void Awake()
 	{
-		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		rb2D = GetComponent<Rigidbody2D>();
 	}
 
     private void Update()
     {
-		movement.x = Input.GetAxisRaw("Horizontal") * speed;
-		movement.y = Input.GetAxisRaw("Vertical");
+		if (freeze) return;
 
-		if (Input.GetKeyDown(KeyCode.Space) && !shouldJump && m_Grounded)
+		moveHorizontal = Input.GetAxisRaw("Horizontal");
+		moveVertical = Input.GetAxisRaw("Vertical");
+
+		if (Input.GetKeyDown(KeyCode.Space) && !shouldJump && grounded)
 		{
 			shouldJump = true;
 		}
@@ -42,9 +50,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
 	{
-		movement.x = movement.x * Time.fixedDeltaTime;
+		if (freeze) return;
 
-		if (m_Grounded || movement.y > 0f) movement.y = 0f;
+		if (grounded || (airControl && moveVertical > 0f)) moveVertical = 0f;
 
 		Move();
 	}
@@ -53,25 +61,26 @@ public class PlayerMovement : MonoBehaviour
 	{
 
 		//only control the player if grounded or airControl is turned on
-		if (m_Grounded || m_AirControl)
+		if (grounded || airControl)
 		{
 			//m_Rigidbody2D.MovePosition(transform.position + movement);
-			transform.position += movement;
+			//transform.position += movement;
+			rb2D.velocity = new Vector3(moveHorizontal * speed, rb2D.velocity.y, moveVertical * speed);
 
-			if (movement.x > 0 && !m_FacingRight)
+			if (moveHorizontal > 0 && !facingRight)
 			{
 				Flip();
 			}
-			else if (movement.x < 0 && m_FacingRight)
+			else if (moveHorizontal < 0 && facingRight)
 			{
 				Flip();
 			}
 		}
 
-		if (m_Grounded && shouldJump)
+		if (grounded && shouldJump)
 		{
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
-			m_Grounded = false;
+			rb2D.AddForce(new Vector2(0f, m_JumpForce));
+			grounded = false;
 			shouldJump = false;
 		}
 	}
@@ -80,21 +89,21 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (collision.collider.tag == "Ground")
 		{
-			m_Grounded = true;
+			grounded = true;
 		}
 	}
 
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
-		m_FacingRight = !m_FacingRight;
+		facingRight = !facingRight;
 
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-	
+
 	//MINE
 
 	/*

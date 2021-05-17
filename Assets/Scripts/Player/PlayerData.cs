@@ -5,16 +5,14 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int level;
-    public int health;
+    public int currentLevel;
     public float[] position;
     public int[] levels;
     public int[] completedLevels;
 
     public void Clear()
     {
-        level = 0;
-        health = 0;
+        currentLevel = 0;
     }
 }
 
