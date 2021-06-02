@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
+    public Transform trTarget;
+
     public bool followHorizontal;
     public bool followVertical;
+
+    public float offsetY = 0f;
 
     private float startPosX;
     private float startPosY;
@@ -18,8 +22,20 @@ public class FollowCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = new Vector2(
-            followHorizontal? Camera.main.transform.position.x : startPosX,
-            followVertical ? Camera.main.transform.position.y : startPosY);
+        if (GameManager.Instance.paused) return;
+        
+        if (trTarget == null)
+        {
+            transform.position = new Vector2(
+                followHorizontal ? Camera.main.transform.position.x : startPosX,
+                followVertical ? Camera.main.transform.position.y + offsetY : startPosY);
+        }
+        else
+        {
+            transform.position = new Vector2(
+                followHorizontal ? trTarget.position.x : startPosX,
+                followVertical ? trTarget.position.y + offsetY : startPosY);
+        }
+
     }
 }

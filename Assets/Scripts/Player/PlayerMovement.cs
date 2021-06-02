@@ -5,16 +5,21 @@ using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
+	private const int maxJumps = 2;
+
 	[SerializeField] private float speed = 3f;
-	[SerializeField] private float m_JumpForce = 400f;
-	[SerializeField] private bool airControl = false;
+	[SerializeField] private bool airControl = true;
+	private float jumpForce = 900f;
 
 	private Rigidbody2D rb2D;
 
-	private bool freeze = false;
 	private bool grounded;
-	private bool shouldJump = false;
+	private bool freeze = false;
 	private bool facingRight = true;
+
+	//for double jumps
+	private int timesJumped = 0;
+	private bool shouldJump = false;
 
 	private float moveHorizontal = 0f;
 	private float moveVertical = 0f;
@@ -25,24 +30,32 @@ public class PlayerMovement : MonoBehaviour
 		set 
 		{
 			freeze = value;
-			rb2D.simulated = value;
-			rb2D.velocity = Vector3.zero;
+			rb2D.simulated = !value;
+			if (value)
+            {
+				rb2D.velocity = Vector3.zero;
+            }
 		}
     }
 
 	private void Awake()
 	{
-		rb2D = GetComponent<Rigidbody2D>();
+		if (rb2D == null)
+        {
+			rb2D = GetComponent<Rigidbody2D>();
+        }
 	}
 
     private void Update()
     {
+		Freeze = GameManager.Instance.paused;
+
 		if (freeze) return;
 
 		moveHorizontal = Input.GetAxisRaw("Horizontal");
 		moveVertical = Input.GetAxisRaw("Vertical");
 
-		if (Input.GetKeyDown(KeyCode.Space) && !shouldJump && grounded)
+		if (Input.GetKeyDown(KeyCode.Space) && !shouldJump && timesJumped < maxJumps)
 		{
 			shouldJump = true;
 		}
@@ -50,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
 	{
+		Freeze = GameManager.Instance.paused;
+
 		if (freeze) return;
 
 		if (grounded || (airControl && moveVertical > 0f)) moveVertical = 0f;
@@ -59,12 +74,9 @@ public class PlayerMovement : MonoBehaviour
 
 	public void Move()
 	{
-
 		//only control the player if grounded or airControl is turned on
 		if (grounded || airControl)
 		{
-			//m_Rigidbody2D.MovePosition(transform.position + movement);
-			//transform.position += movement;
 			rb2D.velocity = new Vector3(moveHorizontal * speed, rb2D.velocity.y, moveVertical * speed);
 
 			if (moveHorizontal > 0 && !facingRight)
@@ -77,9 +89,9 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
 
-		if (grounded && shouldJump)
+		if (shouldJump && timesJumped++ < maxJumps)
 		{
-			rb2D.AddForce(new Vector2(0f, m_JumpForce));
+			rb2D.AddForce(new Vector2(0f, jumpForce));
 			grounded = false;
 			shouldJump = false;
 		}
@@ -87,8 +99,9 @@ public class PlayerMovement : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.collider.tag == "Ground")
+		if (collision.collider.tag == Tag.Ground.ToString())
 		{
+			timesJumped = 0;
 			grounded = true;
 		}
 	}
@@ -103,117 +116,4 @@ public class PlayerMovement : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-
-	//MINE
-
-	/*
-	private Direction previousDirection;
-	private Direction currentDirection = Direction.None;
-
-	private float moveTimer = 0f;
-	private float timeToMove = 1f;
-
-	public float jumpForce = 300f;
-
-	public Rigidbody2D rigidbody2D;
-	public GameObject goSpritesContainer;
-
-	private Vector3 movement;
-
-	public bool shouldJump = false;
-	//public bool shouldMove = false;
-	public bool shouldMoveAllDirections = false;
-	public bool isGrounded = true;
-
-	public bool CanMoveVertical
-	{
-		//primerno
-		get => shouldMoveAllDirections;
-		set => shouldMoveAllDirections = value;
-	}
-
-	private void Update()
-    {
-
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			shouldJump = true;
-		}
-
-		//if (Input.GetAxisRaw("Horizontal") != 0f && !CanMoveVertical)
-		//{
-		//	Move();
-		//}
-		//else if (Input.GetAxisRaw("Horizontal") != 0f || (Input.GetAxisRaw("Vertical") != 0f && CanMoveVertical))
-		//{
-		//	MoveAllDirections();
-		//}
-
-		movement.x = Input.GetAxisRaw("Horizontal");
-		movement.y = Input.GetAxisRaw("Vertical");
-
-		if (previousDirection != currentDirection)
-		{
-			Flip();
-			previousDirection = currentDirection;
-		}
-	}
-
-    private void FixedUpdate()
-	{
-		if (shouldJump && isGrounded)
-		{
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
-			shouldJump = false;
-			isGrounded = false;
-		}
-
-		if (isGrounded && movement.y > 0f) movement.y = 0f;
-		if (movement.x < 0) currentDirection = Direction.Left;
-		if (movement.x > 0) currentDirection = Direction.Right;
-
-		//transform.position += movement * Time.deltaTime * speed;
-		if (isGrounded)
-        {
-			rigidbody2D.MovePosition(transform.position + movement * Time.deltaTime * speed);
-        }
-        else
-        {
-			movement.x = 1f;
-			rigidbody2D.MovePosition(transform.position + movement * Time.deltaTime * speed);
-		}
-
-		//shouldMove = false;
-		//shouldMoveAllDirections = false;
-	}
-
-	private void Flip()
-    {
-        switch (currentDirection)
-        {
-            case Direction.None:
-                break;
-            case Direction.Up:
-                break;
-            case Direction.Down:
-                break;
-            case Direction.Left:
-				transform.rotation = Quaternion.Euler(0f, 180f, 0);
-				break;
-            case Direction.Right:
-				transform.rotation = Quaternion.Euler(0f, 0f, 0);
-				break;
-            default:
-                break;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-		if (collision.collider.tag == "Ground")
-        {
-			isGrounded = true;
-        }
-    }
-*/
 }

@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 4284560480258114867}
   m_Layer: 0
   m_Name: RoguePlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   m_JumpForce: 1000
-  m_AirControl: 1
+  airControl: 1
 --- !u!1 &1438329270491988325
 GameObject:
   m_ObjectHideFlags: 0

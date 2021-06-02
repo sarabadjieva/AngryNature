@@ -9,8 +9,23 @@ public class MovePosition : MonoBehaviour
     public Vector3 movePositionWith;
     public float speed = 1f;
 
+    private bool collided= false;
+
     void FixedUpdate()
     {
-        transform.position += movePositionWith * Time.fixedDeltaTime * speed;
+        if (GameManager.Instance.paused) return;
+
+        if (!onCollisionWithPlayer || collided)
+        {
+            transform.position += movePositionWith * Time.fixedDeltaTime * speed;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == Tag.Player.ToString() && !collided)
+        {
+            collided = true;
+        }
     }
 }
