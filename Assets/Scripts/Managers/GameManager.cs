@@ -70,4 +70,26 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlaySpawn();
         SceneManager.LoadScene(PlayerData.currentLevel);
     }
+
+    public void GameOver(bool playAudio = true)
+    {
+        if (playAudio)
+        {
+            AudioManager.Instance.PlayGrunt();
+        }
+
+        SaveSystem.SavePlayer();
+        GUIManager.Instance.OpenGameOverMenu();
+    }
+
+    public void WinGame(bool playAudio = true)
+    {
+        if (playAudio)
+        {
+           // AudioManager.Instance.PlayGrunt();
+        }
+
+        SaveSystem.SavePlayer();
+       // GUIManager.Instance.OpenGameOverMenu();
+    }
 }

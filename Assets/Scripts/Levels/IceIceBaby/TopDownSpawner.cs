@@ -11,16 +11,13 @@ public class TopDownSpawner : MonoBehaviour
     private const float timeBetweenSpawn = 1f;
 
     private float timeToSpawn;
-    private float spawnRadius;
     private float halfCamHeight;
     private float halfCamWidth;
 
     private void Start()
     {
-        spawnRadius = levelCamera.orthographicSize * 2.1f;
         halfCamHeight = levelCamera.orthographicSize;
         halfCamWidth = halfCamHeight * levelCamera.aspect;
-
     }
 
     private void Update()

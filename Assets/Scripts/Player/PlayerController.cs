@@ -48,16 +48,6 @@ public class PlayerController : MonoBehaviour
     {
         moveController.Freeze = true;
 
-        AudioManager.Instance.PlayGrunt();
-        SaveSystem.SavePlayer();
-
-        //if (inSecretLevel)
-        //{
-        //    GameManager.Instance.ReloadLevel();
-        //}
-       // else
-       // {
-            GUIManager.Instance.OpenGameOverMenu();
-        //}
+        GameManager.Instance.GameOver();
     }
 }

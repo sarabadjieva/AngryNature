@@ -5,6 +5,7 @@ using UnityEngine;
 public class TopDownPlayerController : MonoBehaviour
 {
     private const int MAX_PEOPLE_SHOT = 3;
+    private const int CARS_DESTROYED_SUCCESS = 100;
 
     public float speed = 3f;
 
@@ -25,6 +26,12 @@ public class TopDownPlayerController : MonoBehaviour
         {
             carsShot = value;
             GUIManager.Instance.AddGameInfoLeft("Cars destroyed: " + value);
+
+            if (value == CARS_DESTROYED_SUCCESS)
+            {
+                //win
+                GameManager.Instance.GameOver(false); ;
+            }
         }
     }
 
@@ -38,8 +45,7 @@ public class TopDownPlayerController : MonoBehaviour
 
             if (value >= MAX_PEOPLE_SHOT)
             {
-                SaveSystem.SavePlayer();
-                GUIManager.Instance.OpenGameOverMenu();
+                GameManager.Instance.GameOver(false); ;
             }
         }
     }
@@ -87,10 +93,7 @@ public class TopDownPlayerController : MonoBehaviour
     {
         if (collision.tag == Tag.InstantDeath.ToString())
         {
-            AudioManager.Instance.PlayGrunt();
-            SaveSystem.SavePlayer();
-
-            GUIManager.Instance.OpenGameOverMenu();
+            GameManager.Instance.GameOver();
         }
     }
 
