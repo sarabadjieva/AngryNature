@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 212460496}
   - component: {fileID: 212460497}
   - component: {fileID: 212460498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_37
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 562760467}
   - component: {fileID: 562760468}
   - component: {fileID: 562760469}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_52
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}
@@ -6842,7 +6842,7 @@ GameObject:
   - component: {fileID: 1115873457}
   - component: {fileID: 1115873458}
   - component: {fileID: 1115873459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_53
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}
@@ -7597,7 +7597,7 @@ GameObject:
   - component: {fileID: 1364986925}
   - component: {fileID: 1364986926}
   - component: {fileID: 1364986927}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_42
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}
@@ -8007,7 +8007,7 @@ GameObject:
   - component: {fileID: 1580774299}
   - component: {fileID: 1580774298}
   - component: {fileID: 1580774300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_47
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}
@@ -8210,7 +8210,7 @@ GameObject:
   - component: {fileID: 1654506364}
   - component: {fileID: 1654506363}
   - component: {fileID: 1654506365}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_36
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}
@@ -10107,7 +10107,7 @@ GameObject:
   - component: {fileID: 1967539862}
   - component: {fileID: 1967539863}
   - component: {fileID: 1967539864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CP_V1.0.4_48
   m_TagString: InstantDeath
   m_Icon: {fileID: 0}

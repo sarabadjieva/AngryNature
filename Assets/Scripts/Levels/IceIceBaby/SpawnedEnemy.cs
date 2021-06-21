@@ -61,7 +61,7 @@ public class SpawnedEnemy : MonoBehaviour
             personAnimator.enabled = true;
             personAnimator.Play("Person" + Random.Range(1,7));
             trTarget = trTargetExit;
-            tag = Tag.Person.ToString();
+            tag = Tag.Untagged.ToString();
         }
         else if (health == -1)
         {
