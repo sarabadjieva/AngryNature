@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
 	[SerializeField] private float speed = 3f;
 	[SerializeField] private bool airControl = true;
-	private float jumpForce = 900f;
+	[SerializeField] private float jumpForce = 900f;
 
 	private Rigidbody2D rb2D;
 

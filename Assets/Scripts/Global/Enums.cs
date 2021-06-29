@@ -12,4 +12,5 @@ public enum Tag
     InstantDeath,
     SecretLevel,
     Bullet,
+    End
 }

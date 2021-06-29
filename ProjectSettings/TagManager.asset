@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ground
   - Water
+  - InstantDeath
+  - Bullet
+  - SecretLevel
+  - End
   layers:
   - Default
   - TransparentFX
